@@ -1,0 +1,86 @@
+/* Global reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Styles for the code editors container */
+#code-editors {
+    display: flex;
+    height: 50vh;
+    background-color: #1f1e1e;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Styles for each code editor */
+.html-editor, .css-editor, .js-editor {
+    position: relative; /* Add position relative */
+    width: calc(33.33%);
+    height: calc(94%);
+    border-radius: 12px;
+    background: linear-gradient(45deg, #131313, #101010);
+    box-shadow: 5px -5px 4px #070707, -5px 5px 4px #1d1d1d;
+    margin: 15px 10px;
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+/* Styles for the card header */
+.card-header {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    height: 38px;
+    background-color: #1f1f1f;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* Styles for the card header icon */
+.card-header img {
+    width: 23px;
+    height:23px;
+    margin-right: 5px;
+}
+
+/* Styles for the card header text */
+.card-header span {
+    font-weight: bold;
+    color: aqua;
+    font-size: 18px;
+    text-shadow: 0 0 0.2px aqua, 0 0 1px aqua, 0 0 2px aqua; /* Add glow effect */
+    letter-spacing: 2px;
+}
+
+/* Styles for the card content (editable area) */
+.card-content {
+    height: calc(100%); /* Adjust height */
+    border-radius: 0 0 10px 10px; /* Only bottom corners rounded */
+    background: #121212;
+    color: white; /* Set text color */
+    font-family: 'Arial', sans-serif; /* Set font family */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    cursor: text; /* Set cursor to text */
+    font-size: 15px;
+    position: relative; /* Add position relative */
+}
+/* Hide default outline when focused */
+.card-content:focus {
+    outline: none;
+}
+
+/* Styles for the view page container */
+#view-page {
+    height: 50vh;
+    padding: 5px; /* Add padding */
+    color: black; /* Text color */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .html-editor, .css-editor, .js-editor {
+        width: 100%; /* Take up full width on smaller screens */
+    }
+}

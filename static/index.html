@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./editors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/theme/material.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/theme/darcula.min.css">
+    <title>Code editor</title>
+    <link rel="icon" type="image/png" href="./icons/code.png">
+</head>
+<body>
+
+    <div id="code-editors">
+        <!-- html card -->
+        <div class="html-editor">
+            <div class="card-header">
+                <img src="./icons/html.png" alt="">
+                <span>HTML</span>
+            </div>
+            <div class="card-content" contenteditable="true" id="html-editor"></div>
+        </div>
+        <!-- css card -->
+        <div class="css-editor">
+            <div class="card-header">
+                <img src="./icons/css.png" alt="">
+                <span>CSS</span>
+            </div>
+            <div class="card-content" contenteditable="true" id="css-editor"></div>
+        </div>
+        <!-- js card -->
+        <div class="js-editor">
+            <div class="card-header">
+                <img src="./icons/js.png" alt="">
+                <span>JavaScript</span>
+            </div>
+            <div class="card-content" contenteditable="true" id="js-editor"></div>
+        </div>
+    </div>
+    <div id="view-page"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/javascript/javascript.min.js"></script>
+    <script src="./interpreter.js"></script>
+</body>
+</html>
